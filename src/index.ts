@@ -11,12 +11,12 @@ const app = new Hono({
 
 app.get("/status", async (c) => {
     const beforeTime = performance.now();
-    const [err] = await hypfFetcher.get("/upload", {
+    const [err] = await hypfFetcher.get("/", {
         headers: {
             "User-Agent": c.req.header("User-Agent") || "FILE-UPLOADER-API:NO-USER-AGENT",
         },
-        // @ts-ignore
-        proxy: "http://160.248.184.217:8888",
+        // @ts-expect-error WAIT FIX
+        proxy: "http://140.227.143.126:3128"
     });
 
     if (err) {
@@ -35,5 +35,5 @@ app.get("/status", async (c) => {
 })
 
 Bun.serve({
-    fetch: app.fetch
+    fetch: app.fetch,
 })
