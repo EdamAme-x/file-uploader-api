@@ -16,7 +16,7 @@ app.get("/status", async (c) => {
             "User-Agent": c.req.header("User-Agent") || "FILE-UPLOADER-API:NO-USER-AGENT",
         },
         // @ts-ignore
-        proxy: "...",
+        proxy: "http://160.248.184.217:8888",
     });
 
     if (err) {
