@@ -19,7 +19,8 @@ app.get("/status", async (c) => {
         },
         cache: "no-store",
         timeout: 8000,
-        retries: 3
+        retries: 3,
+        redirect: "error"
     });
 
     if (err) {
