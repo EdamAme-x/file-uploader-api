@@ -15,6 +15,8 @@ app.get("/status", async (c) => {
         headers: {
             "User-Agent": c.req.header("User-Agent") || "FILE-UPLOADER-API:NO-USER-AGENT",
         },
+        // @ts-ignore
+        proxy: "..."
     });
 
     if (err) {
