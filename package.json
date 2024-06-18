@@ -1,0 +1,19 @@
+{
+  "name": "file-uploader-api",
+  "module": "./src/index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run --watch src/index.ts --dev",
+    "start": "bun run src/index.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "hono": "^4.4.6",
+    "hypf": "^0.2.1"
+  }
+}
