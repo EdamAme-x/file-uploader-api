@@ -14,9 +14,7 @@ app.get("/status", async (c) => {
     const [err] = await hypfFetcher.get("/", {
         headers: {
             "User-Agent": c.req.header("User-Agent") || "FILE-UPLOADER-API:NO-USER-AGENT",
-        },
-        // @ts-expect-error WAIT FIX
-        proxy: "http://140.227.143.126:3128"
+        }
     });
 
     if (err) {
